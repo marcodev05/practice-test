@@ -15,5 +15,5 @@ public class ProduitRequestDto {
     @NotBlank(message = "Le nom de produit est obligatoire")
     private String nom;
     @Min(value = 0, message = "Le prix doit être un nombre positif")
-    private Float prix;
+    private Float prix = 0F;
 }

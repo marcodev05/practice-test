@@ -66,7 +66,7 @@ public class ProduitController {
     @ApiOperation("Supprimer un produit par son id")
     @DeleteMapping("/produits/{id}")
     public ResponseEntity<Response<String>> deleteProduitById(@PathVariable("id") Integer id) {
-        produitService.getById(id);
+        produitService.deleteById(id);
         Response<String> response = new Response<>("PRODUCT DELETED ")
                 .status(HttpStatus.OK.value())
                 .message("Request successfully executed ")
